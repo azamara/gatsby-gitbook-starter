@@ -2,6 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "react-emotion";
 import Link from "./link";
+import theme from './theme';
 import './styles.css';
 import config from '../../config';
 
@@ -44,7 +45,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     position: relative;
 
     &:hover {
-      color: rgb(116, 76, 188) !important;
+      color: ${ theme.activeColor };
     }
 
     ${props =>

@@ -3,6 +3,7 @@ import Tree from './tree';
 import {StaticQuery, graphql} from "gatsby";
 import styled from "react-emotion";
 import {ExternalLink} from "react-feather";
+import theme from '../theme';
 import '../styles.css';
 import config from '../../../config';
 
@@ -19,7 +20,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
-    color: #5C6975;
+    color: ${ theme.color };
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
     padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
@@ -27,13 +28,13 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     position: relative;
 
     &:hover {
-      color: rgb(116, 76, 188) !important;
+      color: ${ theme.activeColor };
     }
 
     ${props =>
       props.active &&
       `
-      color: #663399;
+      color: ${ theme.activeColor };
       border-color: rgb(230,236,241) !important;
       border-style: solid none solid solid;
       border-width: 1px 0px 1px 1px;
@@ -59,22 +60,13 @@ const Sidebar = styled('aside')`
   position: sticky;
   top: 0;
   padding-right: 0;
-  background-color: #372476;
-  /* Safari 4-5, Chrome 1-9 */
-  background: linear-gradient(#372476, #3b173b);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#372476), to(#3b173b));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #372476, #3b173b);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #372476, #3b173b);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #372476, #3b173b);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #372476, #3b173b);
+  color: #222;
+  background-color: ${theme.brandColor};
+  background: ${theme.brandColor};
   @media only screen and (max-width: 767px) {
     padding-left: 0px;
-    background-color: #372476;
-    background: #372476;
+    background-color: ${theme.brandColor};
+    background: ${theme.brandColor};
   }
   @media (min-width: 767px) and (max-width:1023px)
   {
@@ -84,6 +76,15 @@ const Sidebar = styled('aside')`
     width: 100%;
     /* position: relative; */
     height: 100vh;
+  }
+
+  .active > a {
+    background-color: ${theme.brandColorActive};
+    background: ${theme.brandColorActive};
+    color: ${ theme.activeColor };
+  }
+  .item > a:hover {
+    color: ${ theme.activeColor };
   }
 `;
 
@@ -100,7 +101,7 @@ const Divider = styled(props => (
     margin: 0;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid #ede7f3;
+    border-bottom: ${theme.border};
   }
 `;
 

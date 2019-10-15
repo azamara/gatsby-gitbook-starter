@@ -5,10 +5,10 @@ const config = {
 		"gaTrackingId": null
 	},
 	"header": {
-		"logo": "https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/favicon.png",
-		"logoLink": "https://learn.hasura.io",
-		"title": "Gatsby Gitbook Boilerplate",
-		"githubUrl": "https://github.com/hasura/gatsby-gitbook-boilerplate",
+		"logo": "https://d.pr/f/N9G6BQ+",
+		"logoLink": "./",
+		"title": "Gatsby Gitbook Startor",
+		"githubUrl": "",
 		"helpUrl": "",
 		"tweetText": "",
 		"links": [
@@ -28,7 +28,7 @@ const config = {
     		"/codeblock"
 		],
 		"links": [
-			{ "text": "Hasura", "link": "https://hasura.io"},
+			// { "text": "Hasura", "link": "./"},
 		],
 		"frontline": false,
 		"ignoreIndex": true,

@@ -5,6 +5,7 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import styled, { injectGlobal } from "react-emotion";
 import { Layout, Link } from "$components";
 import NextPrevious from '../components/NextPrevious';
+import theme from '../components/theme';
 import '../components/styles.css';
 import config from '../../config';
 
@@ -39,7 +40,7 @@ injectGlobal`
 
   a {
     transition: color 0.15s;
-    color: #663399;
+    color: ${ theme.color };
   }
 `;
 
