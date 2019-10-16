@@ -1,13 +1,17 @@
+const ENV = process.env.ENV || 'development';
+
+console.log(ENV);
+
 const config = {
 	"gatsby": {
-		"pathPrefix": "/",
-		"siteUrl": "https://learn.hasura.io",
+		"pathPrefix": ENV === 'production' ? '/nebula/docs'  : "./",
+		"siteUrl": "https://oss.navercorp.com/nebula/docs",
 		"gaTrackingId": null
 	},
 	"header": {
 		"logo": "https://d.pr/f/N9G6BQ+",
-		"logoLink": "./",
-		"title": "Gatsby Gitbook Startor",
+		"logoLink": "https://d.pr/f/N9G6BQ",
+		"title": "Nebula | Console Appation",
 		"githubUrl": "",
 		"helpUrl": "",
 		"tweetText": "",
@@ -25,7 +29,10 @@ const config = {
 	"sidebar": {
 		"forcedNavOrder": [
 			"/introduction",
-    		"/codeblock"
+			"/comparison",
+			"/design",
+			"/develop",
+			"/screens",
 		],
 		"links": [
 			// { "text": "Hasura", "link": "./"},
@@ -34,10 +41,10 @@ const config = {
 		"ignoreIndex": true,
 	},
 	"siteMetadata": {
-		"title": "Gatsby Gitbook Boilerplate | Hasura",
-		"description": "Documentation built with mdx. Powering learn.hasura.io ",
+		"title": "Nebula Documentation",
+		"description": "Documentation built with mdx.",
 		"ogImage": null,
-		"docsLocation": "https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content",
+		"docsLocation": "https://oss.navercorp.com/nebula/docs/tree/master/content",
 		"favicon": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
 	},
 };

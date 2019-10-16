@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto');
+
+.book,
+.book-summary,
+.book.font-family-1 {
+  font-family: Roboto, "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 720px;
+}
+
+.markdown-section {
+  padding-right: 0;
+}
+
+.color-theme-2 code[class*="language-"],
+.color-theme-2 pre[class*="language-"] {
+  text-shadow: none;
+}
+
+.mermaid > svg {
+  padding-bottom: 10px;
+}
+
+.color-theme-2 .mermaid > svg {
+  background: #fff;
+}
+
+.page-toc {
+  position: fixed;
+  width: 200px;
+  top: 60px;
+  right: 60px;
+  font-size: 80%;
+  padding-top: 20px;
+  margin-left: 10px;
+  border-left: 1px solid #E6ECF1;
+}
+
+.page-toc ul  {
+  padding-left: 8px;
+}
+
+.toc:before {
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #3B454E;
+  display: block;
+  padding-bottom: 10px;
+  content: "CONTENTS";
+}
+
+
+.page-inner {
+  max-width: 1280px;
+}
+
+.gitbook-link {
+  display: none !important;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  min-height: 400px
+}
+
+@media (min-width: 320px) {
+  .page-inner {
+    padding-right: 20px;
+  }
+
+  .page-toc {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) {
+  .page-inner {
+    padding-right: 20px;
+  }
+
+  .page-toc {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-inner {
+    padding-right: 260px;
+  }
+
+  .page-toc {
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-inner {
+    padding-right: 260px;
+  }
+
+  .page-toc {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-inner {
+    padding-right: 260px;
+  }
+
+  .page-toc {
+    display: block;
+    width: 240px;
+    right: 80px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-inner {
+    padding-right: 120px;
+  }
+
+  .page-toc {
+    display: block;
+    width: 260px;
+    right: 80px;
+  }
+}

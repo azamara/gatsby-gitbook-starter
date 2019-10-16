@@ -49,7 +49,7 @@ const Layout = ({ children, location }) => (
           <Sidebar location={location} />
         </LeftSideBarWidth>
         <Content>
-          <MaxWidth>{children}</MaxWidth>
+          <MaxWidth style={{ width: '100%' }}>{children}</MaxWidth>
         </Content>
         <RightSideBarWidth className={'hidden-xs'}>
           <RightSidebar location={location} />
@@ -58,5 +58,10 @@ const Layout = ({ children, location }) => (
     </MDXProvider>
   </ThemeProvider>
 );
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]');
+}
 
 export default Layout;

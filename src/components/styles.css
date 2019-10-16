@@ -3,6 +3,11 @@ body {
   font-family: 'Roboto';
 }
 
+svg .messageText,
+svg tspan {
+  font-family: 'Roboto';
+}
+
 .video-responsive {
   position: relative;
   padding-bottom: 56.2%;
@@ -211,7 +216,7 @@ body {
 }
 .mainWrapper {
   color: rgb(59, 69, 78);
-  max-width: 750px;
+  max-width: 1024px;
 }
 .navBarUL li a:hover {
   opacity: .7;
@@ -546,6 +551,7 @@ pre {
 
 /* tables.css */
 table {
+  width: 100%;
 padding: 0; }
 
 table tr {
@@ -558,15 +564,14 @@ table tr:nth-child(2n) {
   background-color: #f8f8f8; }
 
 table tr th {
+  text-align: center;
   font-weight: bold;
   border: 1px solid #cccccc;
-  text-align: left;
   margin: 0;
 padding: 6px 13px; }
 
 table tr td {
   border: 1px solid #cccccc;
-  text-align: left;
   margin: 0;
 padding: 6px 13px; }
 

@@ -24,7 +24,29 @@ const plugins = [
         },
         {
           resolve: 'gatsby-remark-copy-linked-files'
+        },
+        {
+          resolve: 'gatsby-remark-mermaid',
+          options: {
+              language: 'mermaid',
+              theme: 'default',
+              viewport: {
+                  width: 200,
+                  height: 200
+              },
+              mermaidOptions: {
+                  themeCSS: ""
+              }
+          }
+       },
+       {
+        resolve: "gatsby-remark-embed-markdown",
+        options: {
+          // Example code links are relative to this dir.
+          // eg examples/path/to/file.js
+          directory: `${__dirname}/content/`,
         }
+      }
       ],
       extensions: [".mdx", ".md"]
     }

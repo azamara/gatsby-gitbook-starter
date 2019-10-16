@@ -94,7 +94,7 @@ const SidebarLayout = ({ location }) => (
                   return (
                     <ListItem
                       key={index}
-                      to={`#${itemId}`}
+                      to={`#${btoa(encodeURIComponent(itemId))}`}
                       level={1}
                     >
                       {innerItem.title}

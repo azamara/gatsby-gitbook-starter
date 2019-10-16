@@ -17,6 +17,7 @@ const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, .
   const active =
     location && (location.pathname === url || location.pathname === (config.gatsby.pathPrefix + url));
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
+
   return (
     <li
       className={calculatedClassName}
@@ -39,9 +40,9 @@ const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, .
 
       {!isCollapsed && hasChildren ? (
         <ul>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <TreeNode
-              key={item.url}
+              key={item.url + index}
               setCollapsed={setCollapsed}
               collapsed={collapsed}
               {...item}

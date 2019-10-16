@@ -71,6 +71,23 @@ const Edit = styled('div')`
 `;
 
 export default class MDXRuntimeTest extends Component {
+  componentDidMount() {
+    if (window && window.location && window.location.hash) {
+      try {
+        $('[id]').each((idx, el) => {
+          if(`#${$(el).attr('id')}` === window.location.hash) {
+            $('html, body').animate({
+              scrollTop: $(el).offset().top + 'px'
+            }, 1E3, 'swing');
+          }
+        })
+        
+      } catch(e) {
+        console.log(e);
+      }
+    }
+  }
+
   render() {
     const { data } = this.props;
     const {
